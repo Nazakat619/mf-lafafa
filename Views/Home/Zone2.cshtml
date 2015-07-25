@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "Zone 2";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<div class="container-fluid row">
+    <br /><br />
+    <div class="col-lg-8 col-lg-offset-2 hvr-glow" style="background-color:white; border-radius:20px">
+        <br /><br />
+        <div style=" color: #FF8000; font-family: 'Hobo Std'; font-size: xx-large" class="hvr-float-shadow"> Gourmet Shops (Zone-2) </div>
+        <br /><br /><br />
+        <form role="form" method="post" action="/Home/AddRecord">
+            <div class=" form-group" style=" width:60%; margin-left:10%">
+                <label class="hvr-pop" for="sel1" style="font-size:large">Select Shop:</label>
+                <select style="font-weight:bold" autofocus="autofocus" class="form-control" name="shopName" id="zone">
+                    <option> Badiyan Road </option>
+                    <option> Bhatta Chowk </option>
+                    <option> Cavalary Ground </option>
+                    <option> Ferozpur Road </option>
+                    <option> FF-4 DHA </option>
+                    <option> Firdous Market </option>
+                    <option> Garden Town </option>
+                    <option> Ghalib Market </option>
+                    <option> Ghazi Road </option>
+                    <option> H-Block DHA </option>
+                    <option> Hussain Chowk </option>
+                    <option> Ismail Nagar </option>
+                    <option> K-Block DHA </option>
+                    <option> Kahna Now </option>
+                    <option> Main Defence </option>
+                    <option> Nadra Abad </option>
+                    <option> Naseerabad </option>
+                    <option> Punjab Society Ghazi Road </option>
+                    <option> Shahbaz Road Kasur </option>
+                    <option> Walton Road </option>
+                    <option> XX-3 DHA </option>
+                    <option> YouhanaAbad </option>
+                    <option> Z Block Defence </option>
+                    <option> Zahoor Ellahi Road </option>
+            </select>
+
+            </div>
+            <br />
+            <div style="margin-left: 10%; margin-right:10%">
+                <input type="hidden" name="zone" value="Zone - 2" />
+
+                @Html.Partial("~/Views/Home/OrderPartial.cshtml")
+
+            </div>
+            <br /><br /><br />
+            <button type="submit" class="btn btn-warning hvr-grow-rotate" id="submitBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                Submit Order
+            </button>
+
+        </form>
+        <br /><br />
+
+    </div>
+
+    <!-- ......................Script Area...................-->
+    @Html.Partial("~/Views/Home/ValidationScript.cshtml")
+
+</div>
+
+<br /><br /><br /><br />

@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Zone 5";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<div class="container-fluid row">
+    <br /><br />
+    <div class="col-lg-8 col-lg-offset-2 hvr-glow" style="background-color:white; border-radius:20px">
+        <br /><br />
+        <div style=" color: #FF8000; font-family: 'Hobo Std'; font-size: xx-large" class="hvr-float-shadow"> Gourmet Shops (Zone-5) </div>
+        <br /><br /><br />
+        <form role="form" method="post" action="/Home/AddRecord">
+            <div class=" form-group" style=" width:60%; margin-left:10%">
+                <label class="hvr-pop" for="sel1" style="font-size:large">Select Shop:</label>
+                <select style="font-weight:bold" autofocus="autofocus" class="form-control" name="shopName" id="zone">
+                    <option> Begum Kot </option>
+                    <option> Bilal Ganj </option>
+                    <option> Feroz Wala </option>
+                    <option> Gulshan Ravi </option>
+                    <option> Imamia Colony </option>
+                    <option> Islampura </option>
+                    <option> Kareem Park </option>
+                    <option> Kot Abdul Malik </option>
+                    <option> Krishan Nagar </option>
+                    <option> Lakshman Singh </option>
+                    <option> Muridke </option>
+                    <option> Poonch Road </option>
+                    <option> Rewaz Garden </option>
+                    <option> Rustam Park </option>
+                    <option> Shahdra Chowk </option>
+                    <option> Shahdra Town </option>
+                    <option> Temple Road </option>
+                    <option> Texali Gate </option>
+                </select>
+
+            </div>
+            <br />
+            <div style="margin-left: 10%; margin-right:10%">
+                <input type="hidden" name="zone" value="Zone - 5" />
+
+                @Html.Partial("~/Views/Home/OrderPartial.cshtml")
+
+            </div>
+            <br /><br /><br />
+            <button type="submit" class="btn btn-warning hvr-grow-rotate" id="submitBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                Submit Order
+            </button>
+
+        </form>
+        <br /><br />
+
+    </div>
+
+    @Html.Partial("~/Views/Home/ValidationScript.cshtml")
+
+</div>
+
+<br /><br /><br /><br />

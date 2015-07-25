@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<br />
+
+<div class="container-fluid row">
+    <br /><br />
+    <div class="col-lg-8 col-lg-offset-2  hvr-underline-from-center" style="background-color:white; border-radius:20px">
+        <br /><br />
+        <p style="color: #FF8000; font-family: 'Hobo Std'; font-size: xx-large" class="hvr-bob"> Select Your Zone:</p>
+
+        <form role="form" method="post" action="/Home/Load">
+            <div class=" form-group" style=" width:60%; margin-left:10%">
+                <select autofocus="autofocus" class="form-control" name="zone" id="zone">
+                    <option><b> Zone - 1 </b></option>
+                    <option><b> Zone - 2 </b></option>
+                    <option><b> Zone - 3 </b></option>
+                    <option><b> Zone - 4 </b></option>
+                    <option><b> Zone - 5 </b></option>
+                </select>
+
+            </div>
+
+            <button type="submit" class="btn btn-warning" name="getShopBtn" id="getShopBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                Get Shops here
+            </button>
+
+        </form>
+        <br /><br />
+
+    </div>
+
+
+
+</div>
+

@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Zone 3";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<div class="container-fluid row">
+    <br /><br />
+    <div class="col-lg-8 col-lg-offset-2 hvr-glow" style="background-color:white; border-radius:20px">
+        <br /><br />
+        <div style=" color: #FF8000; font-family: 'Hobo Std'; font-size: xx-large" class="hvr-float-shadow"> Gourmet Shops (Zone-3) </div>
+        <br /><br /><br />
+        <form role="form" method="post" action="/Home/AddRecord">
+            <div class=" form-group" style=" width:60%; margin-left:10%">
+                <label class="hvr-pop" for="sel1" style="font-size:large">Select Shop:</label>
+                <select style="font-weight:bold" autofocus="autofocus" class="form-control" name="shopName" id="zone">
+                    <option> Badami Bagh </option>
+                    <option> Baghban Pura </option>
+                    <option> Bata Pur </option>
+                    <option> Cantt. Girja Chowk </option>
+                    <option> Daroghawala </option>
+                    <option> DharamPura </option>
+                    <option> Jaurey Pull </option>
+                    <option> Kot Khawaja Saeed </option>
+                    <option> Lal Pul </option>
+                    <option> Neelum Cinema </option>
+                    <option> Railway Plaza </option>
+                    <option> Sadar Bazar </option>
+                    <option> Salamat Pura </option>
+                    <option> Shadbagh </option>
+                    <option> Sultan Pura </option>
+                    <option> Shalimar Link Road </option>
+                    <option> Swami Nagar </option>
+                    <option> Taj Bagh </option>
+                    <option> Taj Pura </option>
+                    <option> Zarar Shaheed </option>tion>
+                </select>
+
+            </div>
+            <br />
+            <div style="margin-left: 10%; margin-right:10%">
+                <input type="hidden" name="zone" value="Zone - 3" />
+
+                @Html.Partial("~/Views/Home/OrderPartial.cshtml")
+
+            </div>
+            <br /><br /><br />
+            <button type="submit" class="btn btn-warning hvr-grow-rotate" id="submitBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                Submit Order
+            </button>
+
+        </form>
+        <br /><br />
+
+    </div>
+
+    @Html.Partial("~/Views/Home/ValidationScript.cshtml")
+
+</div>
+
+<br /><br /><br /><br />

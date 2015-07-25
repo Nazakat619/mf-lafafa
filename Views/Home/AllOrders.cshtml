@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "View All Orders";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+
+<div class="container" style="background-color:white">
+    <div class="container-fluid">
+        <br /><p style="font-family:'Hobo Std'; font-size: xx-large; text-align:center"> All Order Details </p>
+        <p style="font-family:'Hobo Std'; font-size: medium; text-align:center"> M.F Lafafa Makers</p>
+        <hr />
+        <table class="table table-striped  table-hover">
+            <tbody style="font-weight:bold;">
+                <tr>
+                    <th> Bill No.  </th>
+                    <th> Shop Name </th>
+                    <th> Order No. </th>
+                    <th> Large Env.</th>
+                    <th> Small Env.</th>
+                    <th> Amount </th>
+                    <th> Date </th>
+                    <th> </th>
+                </tr>
+            </tbody>
+            @foreach (var rec in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td> @rec.billNo </td>
+                        <td><b> @rec.shopName </b></td>
+                        <td><b> @rec.orderNo </b></td>
+                        <td> @rec.large </td>
+                        <td> @rec.small </td>
+                        <td> @rec.amount </td>
+                        <td> @rec.date </td>
+                        <td class="">
+                            <form class="navbar-form container-fluid" method="post" action="/Home/EditRecord">
+                                <input type="hidden" name="billNo" value="@rec.billNo" />
+                                <button class="btn btn-warning btn-sm btn-responsive" id="editBtn" style="margin-top:-5px; width:70%"><span class=" glyphicon glyphicon-pencil"></span> Edit </button>
+                            </form>
+
+                            <form class="navbar-form container-fluid" method="post" action="/Home/DeleteRecord">
+                                <input type="hidden" name="billNo" value="@rec.billNo" />
+                                <button class="btn btn-danger btn-sm btn-responsive" id="deleteBtn" style="margin-top: -5px; width: 70%"><span class="glyphicon glyphicon-trash"></span> Delete </button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+
+        </table>
+    </div>
+
+    <div style="font-family:'Hobo Std'; font-size:x-large; margin-left:5%;">Total Amount: <mark style="color: #B40404"> Rs. @(ViewBag.Total)/-  </mark></div>
+    <br /><br />
+</div>
+<br /><br /><br />
+

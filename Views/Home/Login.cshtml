@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+
+
+    <br /><br /><br /><br /><br />
+    <div class="row">
+
+        <div class="col-lg-4 col-lg-offset-4 hvr-curl-bottom-right" style="border-color:white; border-style:double">
+            <br />
+
+
+            @if ((string)Session["user"] == "noUser")
+            {
+                <div style="font-family: 'Berlin Sans FB'; font-size: x-large; color: #FF8000; border-radius:10px; text-align:center; background-color:white">
+                    Login Failed<br />
+                    Wrong Username Or Password
+                </div>
+                Session["user"] = null;
+                <br />
+            }
+
+            <div>
+                <img src="~/Images/login.png" width="30%" height="20%" />
+                <h1 style="font-family:'Hobo Std'; color:white" class="pull-right hvr-float-shadow"> Admin Login </h1>
+
+            </div>
+
+
+
+            <form class="navbar-form container-fluid" method="post" action="/Home/LoginOK">
+                <div style="font-weight:bold">
+                    <hr />
+                    <input type="text" maxlength="20" autofocus="autofocus" class="form-control" name="name" placeholder="Login Name" style="width: 100%" required />
+                    <br /><br />
+
+                    <input type="password" maxlength="11" class="form-control" name="password" placeholder="Password" style="width:100%" required />
+                    <br /><br />
+
+                    <div style=" width:10%; height:5%">
+                        <button type="submit" class="btn btn-1 btn-1f">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <br />
+        </div>
+
+    </div>
+
+</div>

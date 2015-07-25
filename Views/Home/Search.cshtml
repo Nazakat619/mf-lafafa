@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Search Record";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<br />
+
+<div class="container-fluid row">
+    <br /><br />
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 hvr-underline-from-center" style="background-color:white; border-radius:20px">
+        <br /><br />
+        <p style="color: #FF8000; font-family: 'Hobo Std'; font-size: xx-large" class="hvr-bob"> Search by Shop Name or Date</p>
+
+        <form role="form" method="post" action="/Home/SearchByName">
+            <input type="text" maxlength="30" autofocus="autofocus" class="form-control" name="searchRec" placeholder="BadamiBagh, 31/01/2015 etc..," style="width: 60%; margin-left:10%" required />
+
+            <button type="submit" class="btn btn-warning" name="getShopBtn" id="getShopBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                Get Record
+            </button>
+
+        </form>
+        <br /><br />
+
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <br /><hr />
+    </div>
+</div>
+
+
+<div class="container-fluid row">
+    <br />
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8  hvr-underline-from-center" style="background-color:white; border-radius:20px">
+        <br /><br />
+        <p style="color: #FF8000; font-family:'Hobo Std'; font-size: xx-large" class="hvr-bob"> Search by Bill Number</p>
+
+        <form role="form" method="post" action="/Home/SearchOrderNo">
+            <input type="number" max="99999999" min="0" autofocus="autofocus" class="form-control" name="searchRec" placeholder="12345 etc..," style="width: 60%; margin-left:10%" required />
+
+            <button type="submit" class="btn btn-warning" name="getShopBtn" id="getShopBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                Get Record
+            </button>
+
+        </form>
+        <br /><br />
+
+    </div>
+
+    <div class="col-lg-2"></div>
+</div>
+
+<br />
+<br />
+<br />

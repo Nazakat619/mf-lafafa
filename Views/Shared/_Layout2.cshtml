@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/Content/hover-min.css" rel="stylesheet" />
+    <link href="~/Content/hover.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @* <link rel="stylesheet" href="~/Content/jquery.shining.min.css"> *@
+
+
+    @*Button Effects*@
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative Button Styles  - Modern and subtle styles &amp; effects for buttons" />
+    <meta name="keywords" content="button styles, css3, modern, flat button, subtle, effects, hover, web design" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="~/Content/default.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/component.css" />
+    <script src="~/Scripts/modernizr.custom.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <style>
+        #yourdiv {
+            display: inline;
+        }
+    </style>
+
+</head>
+<body style="background-color: #FF8000">
+
+    <div>
+        <nav class="nav navbar-default navbar-fixed-top" role="navigation">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand"></a>
+                @* <a style="font-size: xx-large; font-family:'Old English Text MT'; color:black; background-color: white" class="navbar-brand" href="">Online Menu</a>
+                *@
+            </div>
+
+            <div style="font-weight:600" id="navbar" class="collapse navbar-collapse">
+                <img src="https://pbs.twimg.com/profile_images/919247382/logo_twitter_gourmet_store_03.gif" class="pull-left hvr-buzz-out" style="margin-right: 2%; margin-top: 0.3%; width:70px; height:60px" />
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(" Zone Area", "Welcome", "Home", new { @class = "hvr-bounce-to-left" })</li>
+                    <li>@Html.ActionLink(" All Orders", "AllOrders", "Home", new { @class = "hvr-bounce-to-top" })</li>
+                    <li>@Html.ActionLink(" Search Record", "Search", "Home", new { @class = "hvr-bounce-to-left" })</li>
+                    <li>@Html.ActionLink(" Contact Us", "ContactUs", "Home", new { @class = "hvr-bounce-to-top" })</li>
+                </ul>
+
+                <div>
+                    <form action="~/Home/Logout" class="pull-right">
+                        <button id="logout" class="btn btn-danger hvr-bounce-out" type="submit" name="logout" style="padding-left:30px; padding-right:30px; margin-right:30px; margin-top:10px; "><span class="glyphicon glyphicon-user"></span>&nbsp LOGOUT </button>
+                    </form>
+                </div>
+            </div>
+
+        </nav>
+
+        <br /><br /><br /><hr />
+        
+            <div style=" height:30px; color:white; font-family:'Hobo Std'; font-size:large">
+                <marquee behavior="alternate"><marquee width="200"> M.F - L A F A F A - M A K E R S</marquee></marquee>
+            </div>
+                
+
+
+
+        @RenderBody()
+
+
+    </div>
+
+
+
+
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/Scripts/Bundles/jquery")
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+
+</body>
+</html>

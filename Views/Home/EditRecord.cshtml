@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Edit Area";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@Scripts.Render("~/Scripts/jquery-1.8.2")
+@Scripts.Render("~/bundles/jquery")
+
+
+<div class="container-fluid row">
+    <br /><br />
+    <div class="col-lg-8 col-lg-offset-2 hvr-glow" style="background-color:white; border-radius:20px">
+        <br /><br />
+        @foreach (var rec in Model)
+        {
+            <div style=" color: #FF8000; font-family: 'Hobo Std'; font-size: xx-large" class="hvr-float-shadow"> Gourmet Shop (@rec.zone) </div>
+            <br /><br /><br />
+            <form role="form" method="post" action="/Home/UpdateRecord">
+                <div class=" form-group" style=" width:60%; margin-left:10%">
+                    <b>Shop Name:</b> <label class="hvr-pop" for="sel1" style="font-size:x-large; margin-left:10%">  @rec.shopName </label>
+
+                </div>
+                <br />
+                <div style="margin-left: 10%; margin-right:10%">
+                    <input type="hidden" name="zone" value="Zone - 1" />
+
+                    <label class="hvr-pop" for="sel1" style="font-size:medium">Order No.</label>
+                    <input type="text" min="0" class="form-control" id="orderNo" maxlength="10" name="orderNo" style="width: 200px" required />
+
+                    <br />
+
+                    <label class="hvr-pop" for="sel1" style="font-size:medium"> Bill No. </label>
+                    <input type="text" class="form-control" name="billNo" id="billNo" maxlength="10" style="width: 170px" readonly />
+
+                    <hr />
+                    <label for="sel1" class="hvr-pop" style="font-size:large;">Item Quantity:</label><br />
+                    <div id="yourdiv">
+                        <input type="number" min="0" maxlength="5" max="99999" class="form-control" name="large" id="large" placeholder="Small Envelope" style="width: 150px; float:left" required />
+
+                        <input type="number" min="0" max="99999" maxlength="5" class="form-control" name="small" id="small" placeholder="Large Envelope" style="width: 150px; margin-left:2%; float: left;" required />
+                    </div>
+                </div>
+                <br /><br /><br />
+                <button type="submit" class="btn btn-warning hvr-grow-rotate" id="submitBtn" style="margin-left: 10%; font-weight:bold; font-family: 'Hobo Std';">
+                    DONE
+                </button>
+
+            </form>
+            <br /><br />
+            
+            <script>
+                $(document).ready(function () {
+                    $('#orderNo').val(@rec.orderNo);
+                    $('#billNo').val(@rec.billNo);
+                    $('#large').val(@rec.large);
+                    $('#small').val(@rec.small);
+                });
+            </script>
+
+        }
+    </div>
+
+    <!-- ......................Script Area...................-->
+
+
+</div>
+
+<br /><br /><br /><br />
