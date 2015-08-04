@@ -28,10 +28,18 @@
     <link rel="stylesheet" type="text/css" href="~/Content/component.css" />
     <script src="~/Scripts/modernizr.custom.js"></script>
 
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1365px 650px;
+            background-image: url(http://s1.picswalls.com/wallpapers/2014/02/08/autumn-background_063023807_28.jpg);
+        }
+    </style>
 
 
 </head>
-<body style="background-color: #FF8000">
+<body>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
